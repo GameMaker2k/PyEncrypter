@@ -22,7 +22,7 @@ def str_replace(search, replace, subject, count=-1):
  outstring = subject;
  if(isinstance(search, str) and isinstance(replace, str)):
   outstring = outstring.replace(search, replace, count);
- if((isinstance(search, list) and isinstance(replace, list)) or (isinstance(search, tuple) and isinstance(replace, tuple))):
+ if((isinstance(search, (tuple, list)) and isinstance(replace, (tuple, list)))):
   for subsearch, subreplace in zip(search, replace):
    outstring = outstring.replace(subsearch, subreplace, count);
  return outstring;
