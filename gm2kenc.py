@@ -18,6 +18,24 @@
     $FileInfo: gm2kenc.py - Last Update: 1/22/2018 Ver. 1.0.0 RC 1 - Author: cooldude2k $
 '''
 
+__program_name__ = "PyEncrypter"
+__project__ = __program_name__
+__project_url__ = "https://github.com/GameMaker2k/PyEncrypter"
+__version_info__ = (1, 0, 0, "RC 1", 1)
+__version_date_info__ = (2024, 10, 22, "RC 1", 1)
+__version_date__ = str(__version_date_info__[0])+"."+str(__version_date_info__[
+    1]).zfill(2)+"."+str(__version_date_info__[2]).zfill(2)
+if(__version_info__[4] is not None):
+    __version_date_plusrc__ = __version_date__ + \
+        "-"+str(__version_date_info__[4])
+if(__version_info__[4] is None):
+    __version_date_plusrc__ = __version_date__
+if(__version_info__[3] is not None):
+    __version__ = str(__version_info__[0])+"."+str(__version_info__[1])+"."+str(
+        __version_info__[2])+" "+str(__version_info__[3])
+if(__version_info__[3] is None):
+    __version__ = str(
+        __version_info__[0])+"."+str(__version_info__[1])+"."+str(__version_info__[2])
 
 def str_replace(search, replace, subject, count=-1):
     outstring = subject
